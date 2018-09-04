@@ -20,7 +20,7 @@ import templateinventar.engine.Images;
 public class Inventar {
     
     private final Images img;
-    private final ArrayList<InventarTile> tileList = new ArrayList<InventarTile>();
+    public final ArrayList<InventarTile> tileList = new ArrayList<InventarTile>();
     
     public Inventar(Canvas c, Images img) {
         this.img = img;

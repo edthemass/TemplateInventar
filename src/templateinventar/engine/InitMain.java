@@ -16,8 +16,8 @@ import templateinventar.level.LevelObject;
  */
 public class InitMain {
     
-    private Images img;
-    private Inventar inv;
+    public Images img;
+    public Inventar inv;
     LevelObject lo;
     
     public InitMain(Canvas c) {

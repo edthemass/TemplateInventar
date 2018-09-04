@@ -20,9 +20,9 @@ import templateinventar.tools.Coord;
  */
 public class InventarTile implements MouseListener{
     
-    String testname;
-    Images img;
-    Point2D.Double pos = new Point2D.Double();
+    public String testname;
+    public Images img;
+    public Point2D.Double pos = new Point2D.Double();
     int height = 12, pic = 2;
     
     public InventarTile(Canvas c, Images img, int x, String n) {
