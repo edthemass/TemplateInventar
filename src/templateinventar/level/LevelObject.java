@@ -47,9 +47,6 @@ public class LevelObject implements MouseListener, MouseMotionListener{
     }
 
     @Override
-    public void mouseClicked(MouseEvent e) {}
-
-    @Override
     public void mousePressed(MouseEvent e) {
         if(Coord.posCheck(e, img.getImg(pic), pos) // CHECK OB ITEM BERÜHRT WIRD
         && (e.getButton() == 1)){ // CHECK OB LINKER MOUSE BUTTON GEDRÜCKT IST
@@ -86,10 +83,13 @@ public class LevelObject implements MouseListener, MouseMotionListener{
             System.err.println(inTouch);
         }
     }
+    
     @Override
     public void mouseEntered(MouseEvent e) {}
     @Override
     public void mouseExited(MouseEvent e) {}
     @Override
     public void mouseMoved(MouseEvent e) {}
+    @Override
+    public void mouseClicked(MouseEvent e) {}
 }
