@@ -7,8 +7,9 @@
 package templateinventar.engine;
 
 import java.awt.Graphics2D;
+import java.awt.geom.Point2D;
 import templateinventar.inventar.Inventar;
-import templateinventar.objects.InvObject;
+import templateinventar.objects.ObjectMoney;
 
 /**
  *
@@ -18,17 +19,20 @@ public class InitMain {
     
     public Images img;
     public Inventar inv;
-    InvObject lo;
+    //Object lo;
+    public ObjectMoney money;
     
     public InitMain(Canvas c) {
         this.img = new Images();
         inv = new Inventar(c, img);
-        lo = new InvObject(c, img);
+        money = new ObjectMoney(c, img, new Point2D.Double(300,300), 34, 1);
+        //lo = new Object(c, img);
     }
     
     public void update(){
         inv.update();
-        lo.update();
+        money.update();
+        //lo.update();
     }
     
     public void render(Graphics2D g2d){
@@ -36,7 +40,8 @@ public class InitMain {
         //g2d.drawImage(img.getImg(0), 0, 0, null);
         
         inv.render(g2d);
-        lo.render(g2d);
+        //lo.render(g2d);
+        money.render(g2d);
     }
     
 }

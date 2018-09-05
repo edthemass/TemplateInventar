@@ -19,7 +19,7 @@ import templateinventar.tools.Coord;
  *
  * @author P01004090
  */
-public class InvObject implements MouseListener, MouseMotionListener{
+public class Object implements MouseListener, MouseMotionListener{
 
     Images img;
     int pic = 3, numbers = 1, value = 1;
@@ -29,7 +29,7 @@ public class InvObject implements MouseListener, MouseMotionListener{
     boolean inTouch = false;
     Canvas c;
     
-    public InvObject(Canvas c, Images img) {
+    public Object(Canvas c, Images img) {
         this.c = c;
         this.img = img;
         posStart.setLocation(200,200);
@@ -48,6 +48,7 @@ public class InvObject implements MouseListener, MouseMotionListener{
     
     public void render(Graphics2D g2d){
         g2d.drawImage(img.getImg(pic), (int) pos.getX(), (int) pos.getY(), null);   
+        g2d.drawString(Integer.toString(numbers), (int) pos.getX() + 5, (int) pos.getY() + 20);
     }
 
     @Override
