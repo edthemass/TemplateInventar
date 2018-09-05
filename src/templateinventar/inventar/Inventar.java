@@ -7,8 +7,6 @@
 package templateinventar.inventar;
 
 import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import templateinventar.engine.Canvas;
 import templateinventar.engine.Images;
@@ -26,12 +24,12 @@ public class Inventar {
         this.img = img;
         int height = 10;// Normal 10
         
-        tileList.add(new InventarTile(c, img, 20, "s1"));
-        tileList.add(new InventarTile(c, img, 110, "s2"));
-        tileList.add(new InventarTile(c, img, 200, "s3"));
-        tileList.add(new InventarTile(c, img, 290, "s4"));
-        tileList.add(new InventarTile(c, img, 380, "s5"));
-        tileList.add(new InventarTile(c, img, 470, "s6"));
+        tileList.add(new InventarTile(c, img.getImg(4), 20, "s1"));
+        tileList.add(new InventarTile(c, img.getImg(4), 110, "s2"));
+        tileList.add(new InventarTile(c, img.getImg(4), 200, "s3"));
+        tileList.add(new InventarTile(c, img.getImg(4), 290, "s4"));
+        tileList.add(new InventarTile(c, img.getImg(4), 380, "s5"));
+        tileList.add(new InventarTile(c, img.getImg(4), 470, "s6"));
     }
     
     public void update(){

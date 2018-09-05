@@ -25,22 +25,17 @@ public class InitMain {
     public InitMain(Canvas c) {
         this.img = new Images();
         inv = new Inventar(c, img);
-        money = new ObjectMoney(c, img, new Point2D.Double(300,300), 34, 1);
-        //lo = new Object(c, img);
+        money = new ObjectMoney(c, img.getImg(4), new Point2D.Double(300,300), 34, 1);
     }
     
     public void update(){
         inv.update();
         money.update();
-        //lo.update();
     }
     
     public void render(Graphics2D g2d){
-        //g2d.drawRect(10, 10, 10, 10);
-        //g2d.drawImage(img.getImg(0), 0, 0, null);
         
         inv.render(g2d);
-        //lo.render(g2d);
         money.render(g2d);
     }
     
