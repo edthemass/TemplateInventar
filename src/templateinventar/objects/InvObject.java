@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package templateinventar.level;
+package templateinventar.objects;
 
 import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
@@ -19,21 +19,25 @@ import templateinventar.tools.Coord;
  *
  * @author P01004090
  */
-public class LevelObject implements MouseListener, MouseMotionListener{
+public class InvObject implements MouseListener, MouseMotionListener{
 
     Images img;
-    int pic = 3;
+    int pic = 3, numbers = 1, value = 1;
     Point2D.Double posStart = new Point2D.Double();
     Point2D.Double pos = new Point2D.Double();
     Point2D.Double posAnker = new Point2D.Double();
     boolean inTouch = false;
     Canvas c;
     
-    public LevelObject(Canvas c, Images img) {
+    public InvObject(Canvas c, Images img) {
         this.c = c;
         this.img = img;
         posStart.setLocation(200,200);
         pos.setLocation(posStart);
+        setListener(c);
+    }
+    
+    private void setListener(Canvas c){
         c.addMouseListener(this);
         c.addMouseMotionListener(this);
     }
@@ -71,7 +75,6 @@ public class LevelObject implements MouseListener, MouseMotionListener{
             for(int i = 0; i < c.initMain.inv.tileList.size(); i++){
                 if(Coord.posCheck(e, c.initMain.inv.tileList.get(i).img.getImg(pic), c.initMain.inv.tileList.get(i).pos)){
                     // BRING DAS ITEM IN DEN IVENTAR SLOT
-                    System.err.println("hit " + c.initMain.inv.tileList.get(i).testname);inTouch = false;
                     pos.setLocation(c.initMain.inv.tileList.get(i).pos);
                     break;
                 } else {
@@ -80,7 +83,6 @@ public class LevelObject implements MouseListener, MouseMotionListener{
                 }
             }
             inTouch = false;
-            System.err.println(inTouch);
         }
     }
     

@@ -8,7 +8,7 @@ package templateinventar.engine;
 
 import java.awt.Graphics2D;
 import templateinventar.inventar.Inventar;
-import templateinventar.level.LevelObject;
+import templateinventar.objects.InvObject;
 
 /**
  *
@@ -18,12 +18,12 @@ public class InitMain {
     
     public Images img;
     public Inventar inv;
-    LevelObject lo;
+    InvObject lo;
     
     public InitMain(Canvas c) {
         this.img = new Images();
         inv = new Inventar(c, img);
-        lo = new LevelObject(c, img);
+        lo = new InvObject(c, img);
     }
     
     public void update(){
