@@ -10,19 +10,17 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.geom.Point2D;
 import templateinventar.engine.Canvas;
-import templateinventar.engine.Images;
 
 /**
  *
  * @author P01004090
  */
-public class ObjectMoney extends Object{
+public class ObjectItems extends Object{
 
-    public ObjectMoney(Canvas c, Image img, Point2D.Double pos, int numbers, int value) {
+    public ObjectItems(Canvas c, Image img, Point2D.Double pos, int numbers, int value, String name) {
         super(c, img);
         setStartPos(pos);
-        //this.posStart = pos;
-        
+        this.name = name;
         this.numbers = numbers;
         this.value = value;
     }
@@ -33,6 +31,6 @@ public class ObjectMoney extends Object{
         g2d.drawImage(imgFrame, (int) pos.getX(), (int) pos.getY(), null);   
         g2d.drawString(Integer.toString(numbers), (int) pos.getX() + 5, (int) pos.getY() + 20);
         // TEST
-        g2d.drawString(Integer.toString(numbers), (int) pos.getX() + 5, (int) pos.getY() + 20);
+        g2d.drawString(name, (int) pos.getX() + 5, (int) pos.getY() + 40);
     }
 }

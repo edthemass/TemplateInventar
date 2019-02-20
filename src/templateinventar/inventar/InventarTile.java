@@ -45,11 +45,7 @@ public class InventarTile implements MouseListener{
     public void mouseClicked(MouseEvent e) {}
 
     @Override
-    public void mousePressed(MouseEvent e) {
-//        if(Coord.posCheck(e, img.getImg(pic), pos)){
-//            //System.err.println("pressed " + testname + e.getPoint());
-//        }
-    }
+    public void mousePressed(MouseEvent e) {}
     
     @Override
     public void mouseReleased(MouseEvent e) {}
